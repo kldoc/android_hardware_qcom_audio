@@ -708,9 +708,8 @@ int disable_snd_device(struct audio_device *adev,
                 return -EINVAL;
             }
 
-<<<<<<< HEAD
             ALOGD("%s: snd_device(%d: %s)", __func__, snd_device, device_name);
-=======
+
             /*
              * Same reason as in enable_snd_device()
              */
@@ -720,7 +719,6 @@ int disable_snd_device(struct audio_device *adev,
             }
 
             ALOGV("%s: snd_device(%d: %s)", __func__, snd_device, device_name);
->>>>>>> c795bc5... hal: Ensure device_name is copied if empty
             audio_route_reset_and_update_path(adev->audio_route, device_name);
         }
         audio_extn_sound_trigger_update_device_status(snd_device,
